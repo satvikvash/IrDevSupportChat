@@ -1,7 +1,7 @@
 import resend
 import time
 
-resend.api_key = "re_J9fpAhYG_KRufi7HBZYadLpfhPgnBSbQ1"
+resend.api_key = ""
 
 FROM_EMAIL = "onboarding@resend.dev"
 TO_EMAIL = "irdevsupport@4zpjqq.onmicrosoft.com"
