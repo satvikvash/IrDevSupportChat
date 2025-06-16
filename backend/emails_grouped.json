@@ -1,0 +1,178 @@
+{
+  "RE: Estimates Dashboard Totals Not Matching Detail View": [
+    {
+      "received_datetime": "2025-06-13T09:42:32+00:00",
+      "body": "Boris,\r\n\r\nConfirmed cache mismatch.\r\n\r\n- Root Cause: Akamai cache not invalidated on Q2 override update\r\n- Fix: Purged regional caches manually\r\n- Implemented: Auto-invalidation hook on override API\r\n\r\nTotals now match detailed values. Thanks for flagging!\r\n\r\nIRHelper Caching Ops\r\n"
+    }
+  ],
+  "Estimates Dashboard Totals Not Matching Detail View": [
+    {
+      "received_datetime": "2025-06-13T09:42:30+00:00",
+      "body": "Support Team,\r\n\r\nThe totals on the overview page of the Estimates dashboard are not matching the drilled-down company views.\r\n\r\n- Client: Apex Equity Partners\r\n- Module: Estimates\r\n- Total: $11.2B\r\n- Sum of details: $10.7B\r\n\r\nPlease validate if caching is out-of-sync.\r\n\r\nBoris Ivanov  \r\nInvestment Analyst\r\n"
+    }
+  ],
+  "RE: SSO Auto-Provisioning Not Working for New Users": [
+    {
+      "received_datetime": "2025-06-13T09:42:30+00:00",
+      "body": "Jeff,\r\n\r\nProvisioning issue resolved.\r\n\r\n- Problem: SCIM sync was disabled post API key rotation\r\n- Fix: Re-enabled SCIM sync with Okta directory\r\n- Added sync webhook retry logic\r\n\r\nNew users should now auto-provision upon SSO login.\r\n\r\nSupport Team\r\n"
+    }
+  ],
+  "SSO Auto-Provisioning Not Working for New Users": [
+    {
+      "received_datetime": "2025-06-13T09:42:28+00:00",
+      "body": "Support,\r\n\r\nNew hires are not being auto-provisioned in IRHelper despite successful Okta login.\r\n\r\n- Client: Nova Investors\r\n- SSO: Okta\r\n- Users affected: 5 (onboarding batch)\r\n- Error: “User not found” after login\r\n\r\nManual creation works fine.\r\n\r\nJeff Cole  \r\nIT Admin\r\n"
+    }
+  ],
+  "RE: Earnings Upload Failing for CSV Imports": [
+    {
+      "received_datetime": "2025-06-13T09:42:27+00:00",
+      "body": "Manoj,\r\n\r\nResolved:\r\n\r\n- Bug in field mapping step due to recent CSV parser update\r\n- Issue affected all files missing optional “Notes” column\r\n- Patched upload backend to handle null field scenarios\r\n- Your file has now been successfully imported\r\n\r\nRegards,  \r\nSupport Team\r\n"
+    }
+  ],
+  "Security Audit - Role-Based Access Not Honored": [
+    {
+      "received_datetime": "2025-06-13T09:42:23+00:00",
+      "body": "Hi Support,\r\n\r\nDuring a routine audit, we found some users had access to restricted estimate reports.\r\n\r\n- Client: Integrity Capital\r\n- Module: RBAC & Permissions\r\n- Observed: Junior analysts accessing sensitive earnings projections\r\n- Access via: URL deep-link, not visible via UI\r\n\r\nThis could be a compliance issue.\r\n\r\nAnanya Das  \r\nCompliance Lead\r\n"
+    }
+  ],
+  "RE: Security Audit - Role-Based Access Not Honored": [
+    {
+      "received_datetime": "2025-06-13T09:42:22+00:00",
+      "body": "Ananya,\r\n\r\nUrgent issue addressed.\r\n\r\n- Flaw: Missing RBAC middleware on direct report URL handler\r\n- Patch: Applied permission check for all report endpoints\r\n- Audit log created for all sensitive access events\r\n\r\nPlease rerun your audit to confirm resolution.\r\n\r\nSecurity Engineering\r\n"
+    }
+  ],
+  "RE: Research Summary Widget Crashing Dashboard": [
+    {
+      "received_datetime": "2025-06-13T09:42:21+00:00",
+      "body": "Sandra,\r\n\r\nThanks for flagging this.\r\n\r\n- Missing JS bundle reference due to CDN update\r\n- Research Summary widget not deployed on latest CDN manifest\r\n- Deployed fix, validated widget rendering in staging and prod\r\n\r\nDashboard should now work smoothly.\r\n\r\nInfra Team\r\n"
+    }
+  ],
+  "Research Summary Widget Crashing Dashboard": [
+    {
+      "received_datetime": "2025-06-13T09:42:17+00:00",
+      "body": "Hello Support,\r\n\r\nOur internal IR dashboard fails to load when the Research Summary widget is added.\r\n\r\n- Client: BlueHorizon Investments\r\n- Module: Custom Dashboard Builder\r\n- Widget: Research Summary\r\n- Error: \"Module not defined – ir-research-widget.js\"\r\n\r\nOther widgets load fine.\r\n\r\nSandra Dell  \r\nBusiness Analyst\r\n"
+    }
+  ],
+  "RE: Transcript Sync Delayed Across Global Feeds": [
+    {
+      "received_datetime": "2025-06-13T09:42:15+00:00",
+      "body": "Tomoya,\r\n\r\nThanks for reporting.\r\n\r\n- Root Cause: Cron job failure in ir-transcripts-apac-parser\r\n- Scheduled ingestion skipped 2 cycles on June 9\r\n- Fix: Restarted ETL scheduler, patched memory leak\r\n- Added: Auto-restart and alerting on ingestion skips\r\n\r\nBacklog cleared. Transcripts flowing as expected.\r\n\r\nBest,  \r\nIR Data Pipeline Team\r\n"
+    }
+  ],
+  "Transcript Sync Delayed Across Global Feeds": [
+    {
+      "received_datetime": "2025-06-13T09:42:14+00:00",
+      "body": "Team,\r\n\r\nWe’re seeing delays in transcripts showing up for non-US companies.\r\n\r\n- Client: EastBridge Holdings (APAC focus)\r\n- Module: Transcripts\r\n- Delay: 6–8 hours from event time\r\n- Affected: TSMC, Reliance, Softbank\r\n- Expected: 30-minute lag\r\n\r\nPlease investigate ingestion delay.\r\n\r\nTomoya Ito  \r\nSenior Analyst\r\n"
+    }
+  ],
+  "Earnings Upload Failing for CSV Imports": [
+    {
+      "received_datetime": "2025-06-13T09:42:10+00:00",
+      "body": "Hi Support,\r\n\r\nAttempting to upload earnings data in bulk using the CSV import feature, but getting 500 Internal Server Error.\r\n\r\n- Client: Sunrise Capital\r\n- Module: Estimates Import\r\n- File: earnings_q2_2025.csv\r\n- Tried browsers: Chrome, Firefox\r\n- Happens on step: \"Map Fields\"\r\n\r\nPlease help resolve ASAP.\r\n\r\nManoj Verma  \r\nDirector, Financial Data Ops\r\n"
+    }
+  ],
+  "RE: Client Alerting Notifications Not Delivered": [
+    {
+      "received_datetime": "2025-06-13T09:42:07+00:00",
+      "body": "Emily,\r\n\r\nIssue resolved:\r\n\r\n- Root cause: Misconfigured Akamai edge cache blocking webhook-to-email bridge\r\n- Fix: Updated cache rules and whitelisted IP for our email trigger API\r\n- Verified: Delivery resumed to all alert subscribers\r\n- Action: Enabled webhook logs in Notification module\r\n\r\nThanks,  \r\nDevOps Team\r\n"
+    }
+  ],
+  "Client Alerting Notifications Not Delivered": [
+    {
+      "received_datetime": "2025-06-13T09:42:04+00:00",
+      "body": "Hi team,\r\n\r\nWe're not receiving real-time alert emails for stock movement triggers set in the Notification module.\r\n\r\nDetails:\r\n- Client: EquityGroup Inc.\r\n- Module: Notifications\r\n- Affected alert types: Stock movement, earnings updates\r\n- Last received email: June 5, 10:15 AM EST\r\n\r\nThis is causing missed event notifications. Please advise.\r\n\r\nEmily Hughes  \r\nVP, Investor Coverage\r\n"
+    }
+  ],
+  "Data inconsistencies across Research and Estimates modules": [
+    {
+      "received_datetime": "2025-06-13T09:32:52+00:00",
+      "body": "Support Team,\r\n\r\nWe're seeing significant data mismatches between modules that should be pulling from the same external sources.\r\n\r\nIssues:\r\n- Research module shows $2.5B (FactCheck)\r\n- Estimates module shows $2.1B (ConnextUsers)\r\n- Transcripts module references $2.3B\r\n\r\nWhich source is authoritative?\r\n\r\nDavid Park\r\n\r\n---\r\n\r\nDavid,\r\n\r\nMulti-vendor data sync issue identified and corrected:\r\n\r\nRoot Cause:\r\n- FactCheck = real-time, ConnextUsers = 24hr delay, Transcripts = 48hr cache\r\n\r\nResolution:\r\n- FactCheck set as primary source\r\n- Timestamps added to all modules\r\n- Unified data lake created for tracking\r\n\r\nData consistency should be maintained going forward.\r\n\r\nDataOps Team\r\n"
+    }
+  ],
+  "URGENT: Cannot login via ConnextUsers SSO - entire team blocked": [
+    {
+      "received_datetime": "2025-06-13T09:32:47+00:00",
+      "body": "URGENT SUPPORT NEEDED\r\n\r\nOur entire IR team (25 users) cannot access IRHelper this morning. SSO login through ConnextUsers is failing.\r\n\r\nError: \"SAML Authentication Failed - Invalid Assertion\"\r\n\r\nBoard presentation in 3 hours. Need immediate resolution.\r\n\r\nMaria Gonzalez\r\n\r\n---\r\n\r\nMaria,\r\n\r\nSSO integration emergency resolved:\r\n\r\nIssue:\r\n- ConnextUsers updated SAML certificate yesterday\r\n- IRHelper auth service using expired certificate\r\n- Auto-renewal failed due to firewall changes\r\n\r\nFix:\r\n- Manually updated SAML certificate in ir-auth-svc\r\n- Reconfigured trust with ConnextUsers\r\n- Restarted auth microservices cluster\r\n\r\nAll users should be able to login normally.\r\n\r\nSecurity Team\r\n"
+    }
+  ],
+  "Fact-checking service failing - getting rate limit errors": [
+    {
+      "received_datetime": "2025-06-13T09:32:42+00:00",
+      "body": "Hi Support,\r\n\r\nOur fact-checking integration is failing when we try to verify earnings estimates. Getting consistent rate limit errors from FactCheck API.\r\n\r\nError: \"429 Too Many Requests - Rate limit exceeded (100 requests/hour)\"\r\n\r\nWe have a premium FactCheck subscription. This shouldn't be happening.\r\n\r\nAlex Thompson\r\n\r\n---\r\n\r\nAlex,\r\n\r\nFactCheck integration issue resolved:\r\n\r\nRoot Cause:\r\n- IRHelper was using legacy FactCheck API key (basic tier)\r\n- Premium API credentials not updated in ir-factcheck-svc\r\n\r\nResolution:\r\n- Updated API credentials to premium tier (1000 requests/hour)\r\n- Implemented request caching to reduce API calls by 60%\r\n- Added retry logic with exponential backoff\r\n\r\nFactCheck integration should work normally now.\r\n\r\nIntegrations Team\r\n"
+    }
+  ],
+  "IRHelper entire platform running slow across all modules": [
+    {
+      "received_datetime": "2025-06-13T09:32:42+00:00",
+      "body": "Support,\r\n\r\nSince this morning, IRHelper has been extremely sluggish across all modules:\r\n- Estimates taking 30+ seconds to load\r\n- Research summaries timing out\r\n- Transcripts search not returning results\r\n- Even login is slow (15+ seconds)\r\n\r\nOur entire IR workflow is impacted. Multiple users reporting same issues.\r\n\r\nSystem details:\r\n- 15 concurrent users\r\n- All modules affected\r\n- Started around 9 AM PST\r\n\r\nPlease investigate ASAP.\r\n\r\nRobert Kim  \r\nDirector of Investor Relations\r\n\r\n---\r\n\r\nRobert,\r\n\r\nSystem-wide performance issue identified and resolved:\r\n\r\nRoot Cause:\r\n- AWS Application Load Balancer health check misconfiguration\r\n- 40% of microservices marked as unhealthy incorrectly\r\n- Service mesh routing to overloaded healthy instances\r\n- Database connection pool exhaustion on remaining services\r\n\r\nResolution:\r\n- Fixed ALB health check endpoints for all 127 microservices\r\n- Restarted connection pools on RDS instances\r\n- Temporarily scaled up compute capacity by 50%\r\n- Cleared Akamai cache globally to ensure fresh routing\r\n\r\nPerformance metrics back to normal baselines. \r\n\r\nArchitecture Team\r\n"
+    }
+  ],
+  "AI Research summaries cutting off mid-sentence": [
+    {
+      "received_datetime": "2025-06-13T09:32:41+00:00",
+      "body": "Hello,\r\n\r\nThe AI-generated research summaries in IRHelper are incomplete. They seem to cut off randomly in the middle of analysis, especially for longer research reports.\r\n\r\nExamples:\r\n- Tesla Q2 analysis: Summary stops after 2 paragraphs (should be 4-5)\r\n- Market overview for tech sector: Cuts off mid-sentence about growth projections\r\n- Competitor analysis: Missing entire conclusion section\r\n\r\nThis makes the summaries unreliable for client presentations.\r\n\r\nIs there a length limit? Can this be increased?\r\n\r\nJennifer Wang\r\n\r\n---\r\n\r\nJennifer,\r\n\r\nIssue confirmed - hitting Bedrock token limits:\r\n\r\nProblem:\r\n- Claude model configured with 4,096 token limit per request\r\n- Longer research documents exceeding input token capacity\r\n- Response truncation occurring when hitting output limits\r\n\r\nSolution implemented:\r\n- Upgraded to Claude Sonnet with 200K token context window\r\n- Implemented document chunking for large research reports\r\n- Added streaming responses to handle longer outputs\r\n- Enhanced error handling with user-friendly messages\r\n\r\nResearch summaries should now handle documents up to 50 pages without truncation.\r\n\r\nAI Operations Team\r\n"
+    }
+  ],
+  "Estimates dashboard extremely slow - timing out": [
+    {
+      "received_datetime": "2025-06-13T09:32:36+00:00",
+      "body": "Support Team,\r\n\r\nThe Estimates module is practically unusable today. Loading our quarterly estimates dashboard is taking 3-5 minutes or timing out completely.\r\n\r\nDetails:\r\n- Module: Estimates Dashboard\r\n- Query: Q2 2025 revenue estimates for portfolio companies\r\n- Browser: Chrome, Edge (both affected)\r\n- Error: \"Request timeout - please try again later\"\r\n\r\nOur client presentation is in 2 hours. Need immediate assistance.\r\n\r\nMichael Chen\r\nVP, Investor Relations\r\n\r\n---\r\n\r\nMichael,\r\n\r\nRoot cause identified:\r\n- AWS RDS read replica lag of 45 seconds due to large batch ETL job\r\n- Estimates microservice making inefficient database queries\r\n- Missing index on estimates table for date range queries\r\n\r\nResolution implemented:\r\n- ETL job rescheduled to off-peak hours\r\n- Added database index for estimates.quarter_year column\r\n- Deployed optimized queries to ir-estimates-svc v2.1.3\r\n- Akamai edge caching enabled for estimates aggregations\r\n\r\nDashboard should now load in under 5 seconds. Please verify.\r\n\r\nIRHelper Support Team\r\n"
+    },
+    {
+      "received_datetime": "2025-06-12T17:46:39+00:00",
+      "body": "Support Team,The Estimates module is practically unusable today. Loading our quarterly estimates dashboard is taking 3-5 minutes or timing out completely.Details:- Module: Estimates Dashboard- Query: Q2 2025 revenue estimates for portfolio companies- Browser: Chrome, Edge (both affected)- Error: \"Request timeout - please try again later\"Our client presentation is in 2 hours. Need immediate assistance.Michael ChenVP, Investor RelationsInvestment Bank Corp"
+    }
+  ],
+  "Cannot access earnings call transcripts - 403 Forbidden": [
+    {
+      "received_datetime": "2025-06-13T09:32:35+00:00",
+      "body": "Hi,\r\n\r\nI'm getting permission errors when trying to download earnings call transcripts from last week's calls.\r\n\r\nError message: \"Access Denied - S3 Bucket Permission Error (403)\"\r\n\r\nAffected transcripts:\r\n- AAPL Q2 2025 Earnings Call\r\n- MSFT Q2 2025 Earnings Call  \r\n- GOOGL Q2 2025 Earnings Call\r\n\r\nThis worked fine yesterday. My user role hasn't changed.\r\n\r\nThanks,\r\nLisa Rodriguez\r\n\r\n---\r\n\r\nLisa,\r\n\r\nIssue traced to AWS IAM policy update deployed yesterday:\r\n- S3 bucket policy for ir-transcripts-prod was overly restrictive\r\n- Removed read access for standard user roles accidentally\r\n- Affected all users in 'IR-Analyst' and 'IR-Manager' groups\r\n\r\nFix deployed:\r\n- Restored proper IAM permissions for transcript bucket\r\n- Updated ir-transcripts-svc service role\r\n- Added CloudWatch alerts for future S3 permission issues\r\n\r\nAll transcript downloads should work normally now.\r\n\r\nDevOps Team\r\n"
+    }
+  ],
+  "Research module not generating AI summaries - URGENT": [
+    {
+      "received_datetime": "2025-06-13T09:32:34+00:00",
+      "body": "Hi Support Team,\r\n\r\nOur IR team is experiencing critical issues with the Research module. When we try to generate AI-powered research summaries for Q2 earnings analysis, we're getting timeout errors. \r\n\r\nError details:\r\n- Module: Research AI Summary\r\n- Error: \"Bedrock service unavailable - connection timeout after 30s\"\r\n- Affected users: All IR analysts (12 users)\r\n- First occurred: Today 2:15 PM EST\r\n\r\nThis is blocking our earnings preparation for tomorrow's board meeting. Please prioritize.\r\n\r\nBest regards,\r\nSarah Martinez\r\nSenior IR Analyst\r\n\r\n---\r\n\r\nSarah,\r\n\r\nThanks for reporting. Our AWS CloudWatch logs show:\r\n- Bedrock API rate limiting on us-east-1 region\r\n- Research microservice (ir-research-svc) hitting concurrent execution limits\r\n- Akamai cache miss rate at 85% for research endpoints\r\n\r\nQuick fix applied:\r\n- Increased Bedrock provisioned throughput\r\n- Scaled research service from 3 to 8 instances\r\n- Cleared Akamai cache for /research/* endpoints\r\n\r\nPlease test and confirm resolution.\r\n\r\nDevOps Team\r\n"
+    },
+    {
+      "received_datetime": "2025-06-12T17:48:30+00:00",
+      "body": "Hi Support Team,Our IR team is experiencing critical issues with the Research module. When we try to generate AI-powered research summaries for Q2 earnings analysis, we're getting timeout errors. Error details:- Module: Research AI Summary- Error: \"Bedrock service unavailable - connection timeout after 30s\"- Affected users: All IR analysts (12 users)- First occurred: Today 2:15 PM ESTThis is blocking our earnings preparation for tomorrow's board meeting. Please prioritize.Best regards,Sarah MartinezSenior IR Analyst"
+    }
+  ],
+  "✅ Test Email from Resend": [
+    {
+      "received_datetime": "2025-06-13T09:29:50+00:00",
+      "body": "This is a minimal test email sent using Resend's sandbox domain.\r\n"
+    }
+  ],
+  "RE: [CASE-2024-001] RESOLVED - Lambda timeout increased": [
+    {
+      "received_datetime": "2025-06-13T09:27:45+00:00",
+      "body": "Original From: Support Team <support@company.com>\r\nTimestamp: 2024-06-10 15:30:00\r\nCase ID: CASE-2024-001\r\n--------------------------------------------------\r\n\r\nHi John,\r\n\r\nCASE-2024-001 is now RESOLVED.\r\n\r\nResolution Summary:\r\n✓ Lambda timeout increased from 3s to 15s\r\n✓ Added retry logic for Stripe API calls\r\n✓ API Gateway performance restored\r\n✓ Payment success rate back to 99.8%\r\n\r\nMonitoring Results (last 30 minutes):\r\n- API Gateway response time: 1.2s average\r\n- Lambda execution time: 2.8s average\r\n- Payment success rate: 99.8%\r\n- No timeout errors detected\r\n\r\nPreventive Measures:\r\n- Enhanced monitoring for Lambda timeouts\r\n- Stripe API performance alerts added\r\n- Documentation updated with new timeout settings\r\n\r\nCase closed at 3:30 PM EST.\r\n\r\nBest regards,\r\nSupport Team\r\nFinal Resolution\r\n"
+    }
+  ],
+  "RE: [CASE-2024-001] Investigation started - Lambda timeout identified": [
+    {
+      "received_datetime": "2025-06-13T09:27:40+00:00",
+      "body": "Original From: Support Team <support@company.com>\r\nTimestamp: 2024-06-10 14:45:00\r\nCase ID: CASE-2024-001\r\n--------------------------------------------------\r\n\r\nHi John,\r\n\r\nCase CASE-2024-001 created and assigned to our team.\r\n\r\nInitial Investigation:\r\n✓ API Gateway logs reviewed\r\n✓ Lambda function timeout identified\r\n✓ Stripe webhook delays detected\r\n\r\nRoot Cause:\r\n- Lambda function timeout set to 3 seconds\r\n- Stripe API calls taking 4-6 seconds due to increased load\r\n- API Gateway returning 504 after Lambda timeout\r\n\r\nAction Plan:\r\n1. Increase Lambda timeout to 15 seconds\r\n2. Optimize Stripe API calls with retry logic\r\n3. Monitor for 30 minutes post-fix\r\n\r\nETA for resolution: 30 minutes\r\n\r\nBest regards,\r\nSupport Team\r\nIncident Response\r\n"
+    }
+  ],
+  "[CASE-2024-001] API Gateway timeouts affecting payments": [
+    {
+      "received_datetime": "2025-06-13T09:27:34+00:00",
+      "body": "Original From: John Smith <john.smith@clientcorp.com>\r\nTimestamp: 2024-06-10 14:20:00\r\nCase ID: CASE-2024-001\r\n--------------------------------------------------\r\n\r\nHi Support,\r\n\r\nWe're seeing API Gateway timeouts affecting our payment processing.\r\n\r\nIssue Details:\r\n- Started: 2:15 PM EST\r\n- Error: 504 Gateway Timeout\r\n- Affected endpoint: /api/v1/payments\r\n- Impact: 30% of payment requests failing\r\n- AWS Service: API Gateway + Lambda backend\r\n\r\nUsers are unable to complete purchases. Please investigate urgently.\r\n\r\nBest regards,\r\nJohn Smith\r\nDevOps Engineer\r\nClientCorp Inc.\r\njohn.smith@clientcorp.com\r\n"
+    }
+  ],
+  "RE: Research module not generating AI summaries - URGENT": [
+    {
+      "received_datetime": "2025-06-12T17:49:09+00:00",
+      "body": "Sarah,Thanks for reporting. Our AWS CloudWatch logs show:- Bedrock API rate limiting on us-east-1 region- Research microservice (ir-research-svc) hitting concurrent execution limits- Akamai cache miss rate at 85% for research endpointsQuick fix applied:- Increased Bedrock provisioned throughput- Scaled research service from 3 to 8 instances- Cleared Akamai cache for /research/* endpointsPlease test and confirm resolution.DevOps Team"
+    }
+  ],
+  "RE: Estimates dashboard extremely slow - timing out": [
+    {
+      "received_datetime": "2025-06-12T17:47:47+00:00",
+      "body": "Michael,Root cause identified:- AWS RDS read replica lag of 45 seconds due to large batch ETL job- Estimates microservice making inefficient database queries- Missing index on estimates table for date range queriesResolution implemented:- ETL job rescheduled to off-peak hours- Added database index for estimates.quarter_year column- Deployed optimized queries to ir-estimates-svc v2.1.3- Akamai edge caching enabled for estimates aggregationsDashboard should now load in under 5 seconds. Please verify.IRHelper Support Team"
+    }
+  ]
+}
